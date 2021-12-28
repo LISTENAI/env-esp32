@@ -1,0 +1,31 @@
+{
+  "name": "@lisa-env/esp32",
+  "version": "1.0.0",
+  "description": "esp32",
+  "main": "lib",
+  "publishConfig": {
+    "registry": "https://registry-lpm.listenai.com"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "prepublishOnly": "del-cli lib && npm run build"
+  },
+  "author": "xychen <xychen@listenai.com>",
+  "maintainers": [
+    "xychen <xychen@listenai.com>",
+    "zbzhao <zbzhao@listenai.com>"
+  ],
+  "license": "UNLICENSED",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@binary/gcc-xtensa-esp32-elf": "^1.0.2-esp-2021r2-8.4.0",
+    "@lisa-env/type": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "del-cli": "^4.0.1",
+    "typescript": "^4.4.4"
+  }
+}
